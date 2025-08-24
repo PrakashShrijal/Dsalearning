@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,m;
+    cout<<"enter the number of rows:";
+    cin>>n;
+    cout<<"enter the number of column:";
+    cin>>m;
+    int p[n][m];
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            cin>>p[i][j];
+        }
+        
+    }
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            cout<<p[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    
+   
+    
+    
+return 0;
+}

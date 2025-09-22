@@ -1,4 +1,4 @@
-//Given sorted array of non-negative distinct ineteger , find smallest missing non-negative element in it.
+//Given sorted array of non-negative distinct ineteger, find smallest missing non-negative element in it.
 #include<bits/stdc++.h>
 using namespace std;
 int main()
@@ -20,9 +20,9 @@ int main()
      int lo = 0;
      int hi = n-1;
      int ans;
-     while (lo<= hi)
+     while (lo <= hi)
      {
-        int mid = lo + (hi - lo ) / 2;
+        int mid = lo + (hi - lo) / 2;
         if(arr[mid] == mid) lo = mid + 1;
         else{
             ans = mid;

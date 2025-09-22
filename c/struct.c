@@ -1,13 +1,34 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <conio.h>
 
-typedef struct pokemon{
-    int hp;
-    int speed;
-    int attack;
-    char tier;
-}pokemon;
-pokemon arr[10];
-arr[0].attack = 50;
-arr[0].hp = 100;
-arr[0].speed = 30;
-arr[0].tier ='A';
+int linearSearch(int arr[], int l, int r, int key) {
+    if (l > r)   // base case: not found
+        return -1;
+    if (arr[l] == key)  // base case: found
+        return l;
+    return linearSearch(arr, l + 1, r, key);  // recursive call
+}
+
+void main() {
+    int arr[10], n, key, i, pos;
+
+    clrscr();
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+
+    printf("Enter %d elements:\n", n);
+    for (i = 0; i < n; i++)
+        scanf("%d", &arr[i]);
+
+    printf("Enter element to search: ");
+    scanf("%d", &key);
+
+    pos = linearSearch(arr, 0, n - 1, key);
+
+    if (pos == -1)
+        printf("\nElement not found");
+    else
+        printf("\nElement found at index %d", pos);
+
+    getch();
+}

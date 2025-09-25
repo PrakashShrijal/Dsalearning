@@ -18,7 +18,7 @@ int sumn(int n){
 }
 
 //print sum from one no. to another number.
- void sumNToM(int n, int m){
+ void sumNToM(int n, int m){// wrong logic
    
     if(m == n){
         cout<<n<<endl;

@@ -27,7 +27,7 @@ cin>>key;
 
 pos = linearSearch(arr, n, key);
 
-if(pos == -1) cout<<"Elemrnt is not found !";
+if(pos == -1) cout<<"Element is not found !";
 else cout<<"Element is found at  idx :"<<pos;
 return 0;
 }

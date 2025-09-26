@@ -17,12 +17,7 @@ bool canPlaceQueen(int row, int col, int n){
             if(grid[i][j] ==  'Q')   // we are attaced
             return false;
     }
-    // left diag check
-    for (int i = row-1, j = col -1; i>=0 and j>=0 ; i--, j--)
-    {
-        if(grid[i][j] == 'Q')   // we are attacked
-        return false;
-    }
+   
     // right diag check
     for (int i = row-1 , j = col + 1; i >= 0 and j< n; i--, j++)
     {
@@ -59,15 +54,17 @@ void f(int row, int n){
     }
     
 }
- vector<vector<string>> solveNQueens(int n) {
+
+int solveNQueens(int n) {
         grid.clear();
-        result.clear();
+        result = 0;
         grid.resize(n, vector<char>(n,'.'));
         f(0,n);
         return result;
     }
 int main()
 {
+    cout<<solveNQueens(5);
    
 return 0;
 }

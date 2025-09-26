@@ -2,7 +2,7 @@
 using namespace std;
 
 vector<vector<char> > grid;
-vector<vector<int> > result;
+vector<vector<string> > result;
 
 bool canPlaceQueen(int row, int col, int n){
     //column check
@@ -17,12 +17,7 @@ bool canPlaceQueen(int row, int col, int n){
             if(grid[i][j] ==  'Q')   // we are attaced
             return false;
     }
-    // left diag check
-    for (int i = row-1, j = col -1; i>=0 and j>=0 ; i--, j--)
-    {
-        if(grid[i][j] == 'Q')   // we are attacked
-        return false;
-    }
+   
     // right diag check
     for (int i = row-1 , j = col + 1; i >= 0 and j< n; i--, j++)
     {
@@ -59,8 +54,28 @@ void f(int row, int n){
     }
     
 }
+   vector<vector<string>> solveNQueens(int n) {
+        grid.clear();
+        result.clear();
+        grid.resize(n, vector<char>(n,'.'));
+        f(0,n);
+        return result;
+    }
 int main()
-{
+{   int n;
+    cout<<"Enter the number to determine the of grid of chess :";
+    cin>>n;
+    solveNQueens(n);
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            cout<<result[i][j];
 
+        }
+        
+        cout<<endl;
+    }
+    
 return 0;
 }

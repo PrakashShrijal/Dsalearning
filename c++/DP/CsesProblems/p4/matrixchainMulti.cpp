@@ -1,7 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
+
+int f(int i, int j, vector<int> &arr){
+    if(i == j or i+1 == j) return 0;
+
+    int ans = INT_MAX;
+    for (int k = i+1; k < j; k++)
+    {
+        ans = min(ans,f(i,k,arr) + f(k,j,arr) + arr[i]*arr[k]*arr[j]);
+    }
+    return ans;
+}
+
 vector<vector<int>> dp;
-int f(int i, int j, vector<int> &arr){ // Top Down approach.
+int ftd(int i, int j, vector<int> &arr){ // Top Down approach.
     if( i == j or i+1 == j) return 0;
     if(dp[i][j] != -1) return dp[i][j];
     int ans = INT_MAX;

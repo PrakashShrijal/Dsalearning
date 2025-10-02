@@ -34,6 +34,23 @@ int fbp(int n ){
     
 
 }
+int minSteps(int n) {
+    const int INF = 1e9;
+    vector<int> dp(n+1, INF);
+
+    dp[1] = 0;
+    if(n >= 2) dp[2] = 1;
+    if(n >= 3) dp[3] = 1;
+
+     for (int i = 4; i <= n; i++) {
+        dp[i] = 1 + dp[i-1];  // always possible
+        if (i % 2 == 0) dp[i] = min(dp[i], 1 + dp[i/2]);
+        if (i % 3 == 0) dp[i] = min(dp[i], 1 + dp[i/3]);
+    }
+
+    return dp[n];
+}
+
 int main()
 {
     int n;

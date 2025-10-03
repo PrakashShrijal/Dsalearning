@@ -11,7 +11,7 @@ int main()
     cout<<s;
 return 0;
 }
-// answer to why becoz it works on ASCII vaule while sorting.  (Lexicographical order)
+// answer to why becoz it works on ASCII value while sorting.  (Lexicographical order)
 //prakash shrijal is king
 //   aaaghhiiijkklnprrsss       output
 // another output

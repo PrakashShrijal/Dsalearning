@@ -1,4 +1,4 @@
-// return the btotal number of digits in a number without using any lopp.
+// return the total number of digits in a number without using any loop.
 // hint using inbuilt to_string() function
 #include<iostream>
 #include<string.h>

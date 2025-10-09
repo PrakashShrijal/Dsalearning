@@ -1,3 +1,5 @@
+#include<bits/stdc++.h>
+using namespace std;
 class Solution {   // Try with bfs also''''
 public:
     int numIslands(vector<vector<char>>& grid) {
@@ -47,3 +49,7 @@ public:
         return cc;
     }
 };
+int main()
+{
+return 0;
+}

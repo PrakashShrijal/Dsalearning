@@ -5,9 +5,9 @@
 using namespace std;
 int main()
 {   
-   // char str[5] = {'a','b','c','d','e'};
-  // char str[5] = "abcde";(  error array of chars is too long )
-   //char str[5] = "abcd";  // it runs without error why?
+    // char str[5] = {'a','b','c','d','e'};
+    // char str[5] = "abcde";(  error array of chars is too long )
+    //char str[5] = "abcd";  // it runs without error why?
    
 
     // for (int i = 0; i < 5; i++)

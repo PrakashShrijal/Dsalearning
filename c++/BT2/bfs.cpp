@@ -20,8 +20,8 @@ void preorder(Node *root)
 {
     if (root == NULL)  return;
     cout << root->val << " "; // work
-    preorder(root->right); // call
-    preorder(root->left);  // call
+    preorder(root->right);    // call
+    preorder(root->left);     // call
 }
 void inorder(Node *root)
 {

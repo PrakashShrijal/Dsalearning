@@ -11,14 +11,14 @@ class Node{  // TreeNode
         this->left = NULL;
     }
 };
-void dispalTree(Node* root){
+void displayree(Node* root){
     if (root == NULL)
         return;
        
     
     cout<<root->val<<" ";
-    dispalTree(root->right);
-    dispalTree(root->left);
+    displayTree(root->right);
+    displayTree(root->left);
     
 }
 int main()

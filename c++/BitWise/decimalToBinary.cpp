@@ -10,14 +10,17 @@ string decimal_to_binary(int num){
         }else{ // Odd
             result = "1" + result;
         }
-        num = num /2;
+        num = num /2;  // we can use << right shift by 1 which means division by 2^1.
     }
     return result;
 }
 int main()
 {
-    string str = "00101001";
-    cout<<decimal_to_binary(15);
+  //  string str = "00101001";
+  int n;
+  cout<<"Enter the number:";
+  cin>>n;
+    cout<<decimal_to_binary(n);
 
 
 return 0;

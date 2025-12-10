@@ -16,7 +16,7 @@ int main()
     int x;
     cout<<"Enter the Number :";
     cin>>x;
-  cout<<  __builtin_popcount(x)<<endl;
+  cout<<  __builtin_popcount(x)<<endl;   // inbuilt function to count set-bit in C++.
   cout<<setCountBit(x);
 return 0;
 }

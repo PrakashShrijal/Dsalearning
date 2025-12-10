@@ -11,7 +11,7 @@ class Node{  // TreeNode
         this->left = NULL;
     }
 };
-void displayree(Node* root){
+void displayTree(Node* root){
     if (root == NULL)
         return;
        
@@ -37,7 +37,7 @@ int main()
     b->right = e;
     c->left = f;
     c->right = g;
-    dispalTree(a);
+    displayTree(a);
     // 1 2 4 5 3 6 7  output  pre-order
     //1 3 7 6 2 5 4   when  left is called after right  call.
 

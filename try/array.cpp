@@ -1,8 +1,21 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-int main()
-{
-    string p ="praksh";
-   cout<< p.substr(2);
+int main() {
+int n;
+cin >> n;
+int smallest = -1, largest = -1;
+for (int i = 0; i < 31; i++) {
+if (n & (1 << i)) {
+smallest = i;
+break;
+}
+}
+for (int i = 30; i >= 0; i--) {
+if (n & (1 << i)) {
+largest = i;
+break;
+}
+}
+cout << smallest << " " << largest << '\n';
 return 0;
 }

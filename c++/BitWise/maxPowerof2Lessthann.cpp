@@ -1,6 +1,7 @@
+// max power of 2 less than given number.
 #include<bits/stdc++.h>
 using namespace std;
-int max_power_of(int n){
+int max_power_of(int n){  // 32 bit number
     n = n | (n >> 1);
     n = n | (n >> 2);
     n = n | (n >> 4);

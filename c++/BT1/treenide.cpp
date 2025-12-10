@@ -10,7 +10,7 @@ class Node{  // TreeNode
         this->right = NULL;
         this->left = NULL;
     }
-}
+};
 int main()
 {
     Node* a = new Node(1);

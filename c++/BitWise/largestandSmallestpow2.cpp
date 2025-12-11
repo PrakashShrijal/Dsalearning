@@ -23,20 +23,21 @@ int main()
 
     }
     int hig2pow = ((q+1)>>1);
-    int hi2 = 1;
-    int p = n;
-    while (p>0)
+    int  highestpower = 0;
+  
+    while (hig2pow > 0)
     {
-         hi2++;
-        p = p&(p-1);
-       
-
+        hig2pow = hig2pow >> 1;
+        highestpower++;
+        
     }
     
+ 
+    
     cout<<"The lowest power : "<<low2pow<<endl;
-    cout<<"The highest power : "<<hig2pow<<endl;
-    cout<<"The highest power : "<<hi2<<endl;
-
+    cout<<"The highest power : "<<highestpower-1<<endl;
+    
+    
     
 return 0;
 }

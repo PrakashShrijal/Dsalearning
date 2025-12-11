@@ -12,7 +12,8 @@ bool isprime(int num) {  //logic 1.
     return true; 
     }
 
-    bool isprimebtr(int num){       //logic 2.
+    bool isprimebtr(int num){      //logic 2.
+        if (num <= 1) return false;  
         for (int i = 2; i*i <= num; i++)
         {
             if (num % i == 0)
@@ -29,13 +30,13 @@ int main(){
     cout<<"Enter the number:";
     cin>>n;
     cout<<isprime(n);
-    for (int i = a; i <= n; i++)
-    {
-        if (isprimebtr(i))
-        {
-            cout<<i<<" ";
-        }
+    // for (int i = a; i <= n; i++)
+    // {
+    //     if (isprimebtr(i))
+    //     {
+    //         cout<<i<<" ";
+    //     }
         
-    }
+    // }
     return 0;
 }

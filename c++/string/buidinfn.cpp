@@ -28,13 +28,13 @@ int main()
     //  add = add + "1";  // appaneds 
     //  cout<<add<<endl;
 
-    // // reverse operations
-    // string str = "I am Genius";
-    // cout<<str<<endl;
-    // reverse(str.begin(),str.end());
-    // cout<<str<<endl;
-    //  reverse(str.begin()+2,str.end()-1);
-    //  cout<<str<<endl;
+    // reverse operations
+    string str = "I am Genius";
+    cout<<str<<endl;
+    reverse(str.begin(),str.end());
+    cout<<str<<endl;
+     reverse(str.begin()+2,str.end()-1);
+     cout<<str<<endl;
 
     // substr() substring
       string s = "abcdefgh";

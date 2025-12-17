@@ -55,7 +55,7 @@ int main()
     {
         char ch = s[i];  
         int ascii = (int)ch; //typecasting
-        arr[ascii-97]++;  // asccii -97 gives the value at index eg [97-97 value at 0 index]
+        arr[ascii-97]++;  // asccii -97 gives the value at index eg [97-97] value at 0 index]
     }
     int mx = 0;
     for (int i = 0; i < 26; i++)

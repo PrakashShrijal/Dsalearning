@@ -18,14 +18,11 @@ int sumn(int n){
 }
 
 //print sum from one no. to another number.
- void sumNToM(int n, int m){// wrong logic
-   
-    if(m == n){
-        cout<<n<<endl;
-        return ;
-    }
-    sumNToM(n+m, m-1);
- }
+ int sumNToM(int n, int m) {
+    if (n > m) return 0;      // base case
+    return n + sumNToM(n + 1, m);
+}
+
 
 int main()
 {   
@@ -35,6 +32,6 @@ int main()
     cin>>a>>b;
   // sum1ton(a,b);
   // cout<<endl;
-   sumNToM(a,b);
+   cout<<sumNToM(a,b);
 return 0;
 }

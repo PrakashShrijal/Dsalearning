@@ -1,6 +1,4 @@
-
 //stringstream claas
-
 #include<iostream>
 #include<string>
 #include<algorithm>
@@ -9,7 +7,7 @@
 using namespace std;
 int main()
 {
-      // given a sentence str return the word that is occuring most number of times in that sentences.
+    // given a sentence str return the word that is occuring most number of times in that sentences.
     string str = "prakash is great man. He is a millionaire. is  is ";
     stringstream ss(str);
     string temp;
@@ -33,6 +31,7 @@ int main()
     cout<<endl;
     int maxCount = 1;
     int count = 1;
+    
     for (int i = 1; i < v.size(); i++)
     {  if (v[i] == v[i-1])
     {

@@ -4,7 +4,7 @@ void storeSubset(string ans, string original, vector<string> &v, bool flag)
 {
     if (original == "")  //base case
     {
-        v.push_back(ans);               //..........Do it again........... and dry run.......
+        v.push_back(ans);          //..........Do it again........... and dry run.......
         return;
     }
     char ch = original[0];

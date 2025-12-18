@@ -8,6 +8,6 @@ int main()
      cout<<"Enter the string :";
      getline(cin,str);
      int n = str.length();
-     cout<<str.substr(n/2);
+     cout<<str.substr(n/2);// string after n/2 will be printed
 return 0;
 }

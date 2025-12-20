@@ -45,6 +45,7 @@ int binarySearchResur(vector<int> &input, int target, int hi, int lo)
             return binarySearchResur(input,target,mid + 1,hi);
         }
     }
+    
 }
 int main()
 {

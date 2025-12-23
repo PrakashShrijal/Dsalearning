@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .Container{
+            background-color: aqua;
+            border: 5px solid black; 
+            margin: 2px;
+            padding: 2px;
+            
+            display: flex;
+            flex-direction: row;
+            height: 1200px;
+            flex-wrap: wrap;
+             /* Main thing to learn */
+             justify-content: center;
+             /* align-items: center; */
+             align-items: stretch;
+            }
+
+            .Box{
+                height: 200px;
+                width: 200px;
+                border: 2px solid brown;
+                margin: 2px;
+                padding: 2px;
+            }
+            #box0{
+                background-color: beige;
+            }
+            #box1{
+                background-color: blue;
+            }
+            #box2{
+                background-color: chartreuse;
+            }
+            #box3{
+                background-color: darkcyan;
+            }
+            #box4{
+                background-color: green;
+            }
+        
+    </style>
+
+</head>
+<body>
+    <div  class="Container">
+    
+        <div class="Box" id="box0"></div>
+        <div class="Box" id="box1"></div>
+        <div class="Box" id="box2"></div>
+        <div class="Box" id="box3"></div>
+        <div class="Box" id="box4"></div>
+    
+    </div>
+    
+</body>
+</html>

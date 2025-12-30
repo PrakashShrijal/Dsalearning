@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int  gCD(int a, int b){
+int  gCD(int a, int b){   // hcf
     if(a== 0) return b;
     else return gCD(b%a , a);
 }
@@ -22,5 +22,7 @@ int main()
     */
 
     // we will be using the euclid division method here....
+    //“The iterative Euclidean algorithm uses constant
+    //  extra space, whereas the recursive version uses logarithmic space due to the recursion stack.”
 return 0;
 }

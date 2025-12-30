@@ -20,30 +20,33 @@ using namespace std;
         
     }
 
-    void f(vector<vector<int>> & grid, int i, int j, int n, int count)
-    {
-        if(count == n*n -1){
-            // last position 
-            grid[i][j] = count;
-            display(grid,n);
-            cout<<"*************\n\n";
-            grid[i][j] = -1;
-            return;
+   void f(vector<vector<int>> &grid, int i, int j, int n, int count)
+{
+    // mark current cell
+    grid[i][j] = count;
 
-        }
-        // from i, j, we can go to  8 positions
-        // for every position we can only go if  it is safe
-        for (int k = 0; k < 8; k++)
-        {
+    // base case
+    if (count == n*n - 1) {
+        display(grid, n);
+        cout << "*************\n\n";
+        grid[i][j] = -1;  // backtrack
+        return;
+    }
 
-            if (isItSafe(grid, i + dx[k], j + dy[k], n))
-            {
-                grid[i][j] = count;
-                f(grid, i + dx[k], j + dy[k], n, count + 1);
-                grid[i][j] = -1;
-            }
+    // explore all 8 knight moves
+    for (int k = 0; k < 8; k++) {
+        int ni = i + dx[k];
+        int nj = j + dy[k];
+
+        if (isItSafe(grid, ni, nj, n)) {
+            f(grid, ni, nj, n, count + 1);
         }
     }
+
+    // backtrack
+    grid[i][j] = -1;
+}
+
      void knightsTour(int n, int i, int j){
             vector<vector<int> > grid(n,vector<int> (n, -1)); // -1 denotes postion is vacant
             f(grid, i, j, n, 0);
@@ -51,6 +54,9 @@ using namespace std;
 int main()
 {
     knightsTour(5,0,0);
+
+
+    // TC = (8)^n^2
     
     return 0;
 }

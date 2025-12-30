@@ -15,6 +15,7 @@ void  printSubSet(int arr[],int n,int idx,vector<int> ans){
      printSubSet(arr,n,idx+1,ans);
      ans.push_back(arr[idx]);
       printSubSet(arr,n,idx+1,ans);
+      
 }
 int main()
 {

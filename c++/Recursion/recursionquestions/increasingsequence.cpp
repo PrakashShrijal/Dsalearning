@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream>// subsequence of size k
 #include <string>
 #include <vector>
 using namespace std;

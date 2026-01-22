@@ -2,8 +2,7 @@ def sum(x,y):
     p = x+y
     return p
 def dislpay(p):
-    print("Hello Kinng \n"*p )
-    print()
+    print("Hello King \n"*p )
     return
 x = int(input("Enter the num1 :"))
 y = int(input("Enter the num2 :"))

@@ -4,7 +4,7 @@ operator = input("Enter the  operator ")
 
 match operator:
     case "+" :
-        print("sum is ", x +Y)
+        print("sum is ", x + y)
     case "-" :
         print("minus is ",x-y)
     case "*" :

@@ -1,4 +1,4 @@
-fruits = ["apple","banana","papaya","Orange"]
+fruits = ["apple","banana","papaya","Orange"]  # list is array
 print(fruits)
 print(type(fruits))
 print(len(fruits))

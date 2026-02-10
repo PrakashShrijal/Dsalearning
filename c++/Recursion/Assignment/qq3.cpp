@@ -7,11 +7,12 @@ void reverseArray(int arr[], int n){
     if(n<=0) return;
     reverseArray(arr+1,n-1);
     cout<<arr[0]<<" ";
+    
 }
 
 void reverse2(int arr[], int n){
-    if(n < 0) return;
-    cout<<arr[n]<<" ";
+    if(n == 0) return;
+    cout<<arr[n-1]<<" ";
     reverse2(arr, n-1);
 }
 
@@ -26,7 +27,9 @@ int main()
     {
         cin>>arr[i];
     }
-    reverse2(arr,n-1);
+    reverse2(arr,n);
+    reverseArray(arr,n);
+
     
 
 return 0;

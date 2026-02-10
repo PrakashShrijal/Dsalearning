@@ -2,7 +2,7 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-int findidx(int arr[], int n, int lo, int hi, int target){ // when elemets are in ascending order, binary search
+int findidx(int arr[], int n, int lo, int hi, int target){ // when elemets are in sorted  ascending order, binary search
     int mid = lo + (hi- lo)/2;
     while (lo<= hi)
     {
@@ -39,8 +39,8 @@ int main()
     int target;
     cout<<"Enter the target elemnet:";
     cin>>target;
-    //int result = findidx(arr, n, 0, n-1, target);
-    int result = findidx2(arr,n, target,0);
+    int result = findidx(arr, n, 0, n-1, target);
+    // int result = findidx2(arr,n, target,0);
     if (result == -1 )
     {
         cout<<"Element is not found!";

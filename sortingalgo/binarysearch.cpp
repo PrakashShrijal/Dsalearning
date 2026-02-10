@@ -28,24 +28,14 @@ int binarySearch(vector<int> &input, int target)
 //using recursion
 int binarySearchResur(vector<int> &input, int target, int hi, int lo)
 {
-  //  int mid = (hi + lo) / 2;  because this can cause overflow condition.
-  int mid = lo + (hi-lo)/2;
-    while (lo < hi)
-    {
-        if (input[mid] == target)
-        {
-            return mid;
-        }
-        else if (mid > target)
-        {
-            return binarySearchResur(input,target,lo,mid - 1);
-        }
-        else
-        {
-            return binarySearchResur(input,target,mid + 1,hi);
-        }
-    }
-    
+  if(hi < lo) return -1;
+  int mid = lo  + (hi -lo)/2;
+  if (input[mid] == target)
+  {
+    return mid;
+  }
+  if(input[mid] < target) return binarySearchResur(input, target,hi, mid+1);
+  else return binarySearchResur(input, target,mid-1, lo);
 }
 int main()
 {

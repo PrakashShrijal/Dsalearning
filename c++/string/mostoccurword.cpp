@@ -37,6 +37,8 @@ int main()
     {
         count++;
     }else count = 1;
+
+    
      maxCount = max(maxCount,count); // if maxcount< cont then maxcount = count
     }
     count  = 1;

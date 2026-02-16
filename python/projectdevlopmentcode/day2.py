@@ -23,9 +23,36 @@ def calculate_risk(row):
 
     return risk_score
 
+def risk_level(score):
+    if score == 0:
+        return "LOW"
+    elif score == 1:
+        return "MEDIUM"
+    else:
+        return "HIGH"
+
+
 
 # Apply risk calculation to each row
 data["risk_score"] = data.apply(calculate_risk, axis=1)
+data["risk_level"] = data["risk_score"].apply(risk_level)
+
 
 print("\nUPI Transactions with Risk Score:\n")
 print(data)
+
+# OutPut
+
+# UPI Transactions with Risk Score:
+
+#    amount  hour  is_new_receiver  tx_count_last_1hr  risk_score risk_level
+# 0     120    14                0                  1           0        LOW
+# 1     350    16                0                  2           0        LOW
+# 2    5000     2                1                  6           3       HIGH
+# 3      50     3                1                  5           2       HIGH
+# 4     900    11                0                  1           0        LOW
+# 5    1200    22                1                  2           1     MEDIUM
+# 6      30     1                1                  7           3       HIGH
+# 7     200    10                0                  1           0        LOW
+# 8    8000     0                1                  4           3       HIGH
+# 9     400    18                0                  2           0        LOW

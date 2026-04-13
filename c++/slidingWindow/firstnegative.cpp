@@ -1,4 +1,4 @@
-//first negative number in every window of aize K.
+//first negative number in every window of size K.
 #include<bits/stdc++.h>
 using namespace std;
 

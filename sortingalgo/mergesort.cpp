@@ -28,7 +28,6 @@ void merge(int arr[],int l, int mid,int r){
         }else{
             arr[k++] =b[j++];
         }
-       k++; 
     }
     while (i<an)
     {

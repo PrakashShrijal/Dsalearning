@@ -7,7 +7,8 @@ bool ispowerof2(int n){
     {
         n /= 2;
     }
-    return n == 1;
+   return n == 1;
+   
 }
 int main()
 {

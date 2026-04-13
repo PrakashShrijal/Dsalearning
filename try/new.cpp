@@ -1,22 +1,42 @@
-// function to merge two sorted array
 #include<bits/stdc++.h>
 using namespace std;
-bool isPowerOfTwo(int n) {
-    if (n <= 0) return false;
 
-    while (n % 2 == 0) {
-        n /= 2;
+int partition(int arr[], int si, int ei){
+    int pivotelement = arr[(si+ei)/2];
+    int count = 0;
+    for (int i = si; i <= ei; i++)
+    {
+        if(i == (si+ei)/2) continue;
+        if (arr[i] <= pivotelement)
+        { 
+            count++;
+        }
     }
-    return n == 1;
+    int pivotIdx = count + si;
+    swap(arr[(si+ei)/2], arr[pivotIdx]);
+
+    int i = si;
+    int j = ei;
+    while (i < pivotIdx && j > pivotIdx) 
+    {
+        if(arr[i] <= pivotelement) i++;
+        if(arr[j] > pivotelement) j--;
+        else if(arr[i] > pivotelement && arr[j] <= pivotelement){
+            swap(arr[i], arr[j]);
+            i++;
+            j--;
+        }
+    }
+    return pivotIdx;
 }
 
+void quickSort(int arr[], int si, int ei){
+    if(si >= ei) return;
+    int pi = partition(arr,si,ei);
+    quickSort(arr,si,pi-1);
+    quickSort(arr,pi+1,ei);
+}
 int main()
 {
-    int n;
-    cin>>n;
-    int result = isPowerOfTwo(n);
-    if(result == 0) cout<<"not power of 2 ";
-    else cout<<"power of 2";
-
 return 0;
 }

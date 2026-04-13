@@ -1,4 +1,4 @@
-//first negative number in every window of aize K.  using slidingWindow
+//first negative number in every window of size K.  using slidingWindow
 #include<bits/stdc++.h>
 using namespace std;
 
